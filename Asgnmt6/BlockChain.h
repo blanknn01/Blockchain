@@ -12,5 +12,6 @@ public:
 	void addBlock(TransactionData data);
 	Block* getLatestBlock();
 	void printBlockChain();
+	bool isBlockchainValid();
 };
 

@@ -29,3 +29,14 @@ void BlockChain::printBlockChain()
 		cout << it->getIndex();
 	}
 }
+
+bool BlockChain::isBlockchainValid()
+{
+	for (vector<Block>::iterator it = chain.begin(); it != chain.end(); it++)
+	{
+		if (it->generateHash() == it->getBlockHash()) {
+			return true;
+		}
+		else return false;
+	}
+}

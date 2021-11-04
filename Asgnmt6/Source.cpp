@@ -2,8 +2,24 @@
 #include"Miner.h"
 #include<thread>
 #include<mutex>
+#include<future>
 using namespace std;
 mutex mu_l1;
+double getTotalVolume(BlockChain& blockchain)
+{
+	double total = 0;
+	for (auto it = blockchain.chain.begin(); it != blockchain.chain.end(); it++)
+	{
+		total+=it->getTransactionData().amount;
+	}
+	return total;
+}
+int dd(int a)
+{
+	return a + 1;
+}
+
+
 void fun1(BlockChain& blockchain)
 {
 	mu_l1.lock();
@@ -35,5 +51,10 @@ int main()
 	thread thread_2(fun2, ref(blockchain));
 	thread_1.join();
 	thread_2.join();
+	future<double> res1 = async(launch::async, getTotalVolume, ref(blockchain));
+	double data = res1.get();
+	cout << data << endl;;
 	blockchain.printBlockChain();
+
+
 }

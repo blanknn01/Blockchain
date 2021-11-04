@@ -54,6 +54,7 @@ void Block::setTransactionData(TransactionData transaction_data)
 {
 	this->transaction_data = transaction_data;
 }
+
 size_t Block::generateHash() {
 	string toHashS = to_string(transaction_data.amount) +
 		transaction_data.receiverKey + transaction_data.senderKey +

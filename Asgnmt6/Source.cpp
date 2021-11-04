@@ -47,6 +47,13 @@ int main()
 	thread thread_2(fun2, ref(blockchain));
 	thread_1.join();
 	thread_2.join();
+	if (blockchain.isBlockchainValid())
+	{
+		cout << "valid"<<endl;
+	}
+	else {
+		cout << "there are some invalid blocks"<<endl;
+	}
 	future<double> res1 = async(launch::async, getTotalVolume, ref(blockchain));
 	double data = res1.get();
 	cout << data << endl;;

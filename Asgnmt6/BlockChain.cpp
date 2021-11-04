@@ -26,7 +26,7 @@ void BlockChain::printBlockChain()
 {
 	for (vector<Block>::iterator it = chain.begin(); it != chain.end(); it++)
 	{
-		cout << it->getIndex();
+		cout << it->getBlockHash()<<" ";
 	}
 }
 

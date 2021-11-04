@@ -14,10 +14,6 @@ double getTotalVolume(BlockChain& blockchain)
 	}
 	return total;
 }
-int dd(int a)
-{
-	return a + 1;
-}
 
 
 void fun1(BlockChain& blockchain)

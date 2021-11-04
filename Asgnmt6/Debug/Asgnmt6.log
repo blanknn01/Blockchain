@@ -1,5 +1,2 @@
-﻿  BlockChain.cpp
-  Source.cpp
-  Создание кода...
-C:\Users\Admin\source\repos\Asgnmt6\Asgnmt6\BlockChain.cpp(42): warning C4715: BlockChain::isBlockchainValid: значение возвращается не при всех путях выполнения
+﻿  Source.cpp
   Asgnmt6.vcxproj -> C:\Users\Admin\source\repos\Asgnmt6\Debug\Asgnmt6.exe
